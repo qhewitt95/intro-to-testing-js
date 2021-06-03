@@ -13,18 +13,29 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
-
+//Summer and Obi functions
 describe ('sayHello',function() {
-    it('should be a defined function', function() {
+    it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
-        });
-        it('should return a string when called', function () {
-            expect(typeof  sayHello()).toBe('string');
-        });
-        it('should return the string "Hello, Summer!" when executed', function() {
-            expect(sayHello("Summer")).toBe("Hello, Summer!");
-        });
-        it('should return the string "Hello, Obi!" when executed', function() {
-            expect(sayHello("Obi")).toBe("Hello, Obi!");
-        });
+    });
+    it('should return a string when called', function () {
+        expect(typeof sayHello("Obi")).toBe('string');
+    });
+    it('should return the string "Hello, Summer!" when sayHello("Summer") executed', function () {
+        expect(sayHello("Summer")).toBe("Hello, Summer!");
+    });
+    it('should return the string "Hello, Obi!" when sayHello("Obi") executed', function () {
+        expect(sayHello("Obi")).toBe("Hello, Obi!");
+    });
+    it('should return the string "Hello, Pat!" when sayHello("Pat")" executed', function () {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
     })
+    it('should return the string "Hello, World!" when sayHello()" executed', function () {
+        expect(sayHello()).toBe("Hello, World!");
+    })
+    it('should return the string "Hello, World!" when sayHello()" executed', function () {
+        expect(sayHello(false)).toBe("Hello, World!")
+    })
+})
+
+

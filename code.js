@@ -4,11 +4,10 @@ function helloWorld() {
 }
 
 function sayHello(name) {
-    if(name === "Summer") {
-        return "Hello, Summer!"
-    } else if (name === "Obi")
-    {
-        return "Hello, Obi!"
+    if (name === undefined) {
+        return "Hello, World!"
+    } else if (name === false) {
+        return "Hello, World!";
     }
-    return "Hello Wold!"
+    return "Hello, " + name + "!";
 }
